@@ -1,0 +1,10 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+.main__features-list--item-img {
+  max-width: 100%;
+  height: auto;
+  padding: 0 10px;
+}
