@@ -1,5 +1,29 @@
 /*stylesheet*/
 
+//bring in external style, mixins, and grid layout
+@import 'normalize';
+@import 'bourbon';
+@import 'neat';
+
+//media query variables
+$phone: 'min-width: 375px';
+$tablet: 'min-width: 768px';
+$desktop: 'min-width: 1024px';
+
+* {
+  box-sizing: border-box;
+}
+
 body {
+  //just a crazy color to test @include
+  @include linear-gradient(to top, blue, lightgreen);
+}
+
+.main__features-list--item-img {
+  max-width: 100%;
+  height: auto;
+  padding: 0 10px;
+}
+.header__nav-list--item {
   
 }

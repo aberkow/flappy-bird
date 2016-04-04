@@ -18,11 +18,21 @@ gulp.task('jshint', function(){
 });
 
 //transpile scss to css
-gulp.task('sass', function(){
-  return gulp.src('scss/*.scss')
-    .pipe(sass())
-    .pipe(gulp.dest('css'));
+// Compile Sass task 
+
+gulp.task('sass', function() { 
+  return gulp.src('scss/*.scss') 
+  //includePaths makes sure that bourbon and neat are part of the 'sass' task path.
+    .pipe(sass({ includePaths: require('node-bourbon', 'node-neat').includePaths, 
+                includePaths: require('node-neat').includePaths })) 
+    .pipe(gulp.dest('css')); 
 });
+
+//gulp.task('sass', function(){
+//  return gulp.src('scss/*.scss')
+//    .pipe(sass())
+//    .pipe(gulp.dest('css'));
+//});
 
 //watch for changes
 gulp.task('watch', function(){
