@@ -1,6 +1,7 @@
 var gulp = require('gulp');
 var jshint = require('gulp-jshint');
 var sass = require('gulp-sass');
+var watch = require('gulp-watch');
 var imagemin = require('gulp-imagemin');
 var browserify = require('browserify');
 var uglify = require('gulp-uglify');
