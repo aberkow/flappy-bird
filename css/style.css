@@ -363,10 +363,30 @@ html {
 * {
   box-sizing: border-box; }
 
-body {
-  background-color: blue;
-  background-image: -webkit-linear-gradient(bottom, blue, lightgreen);
-  background-image: linear-gradient(to top,blue, lightgreen); }
+.header {
+  background-color: #c1de73; }
+
+.header__nav {
+  display: inline-block; }
+
+.header__nav-list {
+  list-style-type: none;
+  padding: 0 0.6rem; }
+  .header__nav-list .header__nav-list--item {
+    font-family: "Arimo", sans-serif;
+    color: #222;
+    text-decoration: none;
+    cursor: pointer; }
+    .header__nav-list .header__nav-list--item:hover {
+      color: #d96732;
+      text-decoration: none; }
+
+.header__title {
+  display: inline-block;
+  text-align: center; }
+  .header__title .header__title-text {
+    font-family: "Arimo", sans-serif;
+    margin: 0; }
 
 .main__features-list--item-img {
   max-width: 100%;
