@@ -488,3 +488,16 @@ html {
   color: #222;
   margin-bottom: 0;
   padding-bottom: 1rem; }
+
+.footer__info {
+  text-align: center;
+  padding-bottom: 1rem; }
+  .footer__info .footer__info-text {
+    font-family: "Arimo", sans-serif;
+    color: #222; }
+  .footer__info .footer__info-link {
+    font-family: "Arimo", sans-serif;
+    color: #222; }
+    .footer__info .footer__info-link:hover {
+      color: #d96732;
+      cursor: pointer; }

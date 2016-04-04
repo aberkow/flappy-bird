@@ -27,11 +27,6 @@ $linkColor: #d96732;
 
 * {
   box-sizing: border-box;
-  //border: 1px solid red;
-}
-
-body {
-  
 }
 
 .header {
@@ -163,4 +158,21 @@ body {
   color: $textColor;
   margin-bottom: 0;
   padding-bottom: 1rem;
+}
+
+.footer__info {
+  text-align: center;
+  padding-bottom: 1rem;
+  .footer__info-text {
+    font-family: $fontFamily;
+  color: $textColor;
+  }
+  .footer__info-link {
+    font-family: $fontFamily;
+    color: $textColor;
+      &:hover {
+        color: $linkColor;
+        cursor: pointer;
+      }
+    }
 }
