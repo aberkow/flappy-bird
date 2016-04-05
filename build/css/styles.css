@@ -787,12 +787,18 @@ html {
 * {
   box-sizing: border-box; }
 
+body {
+  background-color: #008593; }
+
 .header {
   background-color: #c1de73;
   position: relative; }
 
 .header__nav {
   display: inline-block; }
+  @media screen and (min-width: 1024px) {
+    .header__nav {
+      margin-left: 2rem; } }
 
 .header__nav-list {
   list-style-type: none;
@@ -816,20 +822,38 @@ html {
   transform: translate(-50%, -50%); }
   .header__title .header__title-text {
     font-family: "Arimo", sans-serif;
+    font-size: 2.5rem;
     margin: 0; }
+    @media screen and (min-width: 768px) {
+      .header__title .header__title-text {
+        font-size: 4rem; } }
 
-.main {
-  background-color: #008593; }
-
-.main__intro {
-  text-align: center; }
-  .main__intro .main__intro-text {
+.ctoa {
+  text-align: center;
+  height: 5rem;
+  position: relative; }
+  @media screen and (min-width: 768px) {
+    .ctoa {
+      margin: 1rem auto; } }
+  .ctoa .ctoa__link {
+    color: #222;
+    text-decoration: none;
     font-family: "Arimo", sans-serif;
-    font-size: 2rem;
-    margin: 0; }
+    font-size: 1.5rem;
+    background-color: #d96732;
+    padding: 1rem 1rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); }
+    @media screen and (min-width: 768px) {
+      .ctoa .ctoa__link {
+        font-size: 2rem; } }
+    @media screen and (min-width: 1024px) {
+      .ctoa .ctoa__link {
+        font-size: 2.5rem; } }
 
 .main__features {
-  background-color: #008593;
   max-width: 68em;
   margin-left: auto;
   margin-right: auto; }
@@ -842,13 +866,21 @@ html {
   float: left;
   display: block;
   margin-right: 2.35765%;
-  width: 48.82117%;
-  overflow: hidden; }
+  width: 48.82117%; }
   .main__features-img:last-child {
     margin-right: 0; }
   .main__features-img .main__features-img--screenshot {
-    max-height: 300px;
-    width: auto; }
+    max-width: 150px;
+    height: auto;
+    margin-left: 8.5298%; }
+    @media screen and (min-width: 768px) {
+      .main__features-img .main__features-img--screenshot {
+        margin-left: 25.58941%;
+        max-width: 175px; } }
+    @media screen and (min-width: 1024px) {
+      .main__features-img .main__features-img--screenshot {
+        margin-left: 42.64902%;
+        max-width: 225px; } }
 
 .main__features-info {
   float: left;
@@ -860,28 +892,36 @@ html {
   .main__features-info:last-child {
     margin-right: 0; }
   .main__features-info .main__features-info--title {
+    margin: 0;
     font-size: 1.5rem;
     font-family: "Arimo", sans-serif; }
+    @media screen and (min-width: 768px) {
+      .main__features-info .main__features-info--title {
+        font-size: 2rem; } }
+    @media screen and (min-width: 1024px) {
+      .main__features-info .main__features-info--title {
+        font-size: 2.5rem; } }
   .main__features-info .main__features-info--text {
     font-size: 1rem;
     font-family: "Arimo", sans-serif; }
+    @media screen and (min-width: 768px) {
+      .main__features-info .main__features-info--text {
+        font-size: 1.5rem; } }
+    @media screen and (min-width: 1024px) {
+      .main__features-info .main__features-info--text {
+        font-size: 1.75rem; } }
 
-.ctoa {
-  background-color: #008593;
+.main__outro {
   text-align: center;
-  height: 5rem;
-  position: relative; }
-  .ctoa .ctoa__link {
-    color: #222;
-    text-decoration: none;
-    font-family: "Arimo", sans-serif;
-    font-size: 1.5rem;
-    background-color: #d96732;
-    padding: 1rem 1rem;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%); }
+  color: #222; }
+  .main__outro .main__outro-text {
+    font-family: "Arimo", sans-serif; }
+    @media screen and (min-width: 768px) {
+      .main__outro .main__outro-text {
+        font-size: 1.5rem; } }
+    @media screen and (min-width: 1024px) {
+      .main__outro .main__outro-text {
+        font-size: 1.75rem; } }
 
 .footer {
   background-color: #c1de73; }
@@ -890,6 +930,9 @@ html {
   padding-top: 0.5rem;
   text-align: center;
   margin: 0 auto; }
+  .footer__social .footer__social-text {
+    font-family: "Arimo", sans-serif;
+    font-size: 0.75rem; }
   .footer__social .footer__social-list {
     list-style-type: none;
     display: inline-block;
@@ -912,6 +955,19 @@ html {
   color: #222;
   margin-bottom: 0;
   padding-bottom: 1rem; }
+
+.footer__info {
+  text-align: center;
+  padding-bottom: 1rem; }
+  .footer__info .footer__info-text {
+    font-family: "Arimo", sans-serif;
+    color: #222; }
+  .footer__info .footer__info-link {
+    font-family: "Arimo", sans-serif;
+    color: #222; }
+    .footer__info .footer__info-link:hover {
+      color: #d96732;
+      cursor: pointer; }
 
 * {
   box-sizing: border-box;

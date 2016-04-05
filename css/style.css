@@ -478,7 +478,7 @@ body {
       .main__features-info .main__features-info--title {
         font-size: 2.5rem; } }
   .main__features-info .main__features-info--text {
-    font-size: 1rem;
+    font-size: 0.9rem;
     font-family: "Arimo", sans-serif; }
     @media screen and (min-width: 768px) {
       .main__features-info .main__features-info--text {
