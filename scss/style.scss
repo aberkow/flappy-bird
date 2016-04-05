@@ -100,23 +100,6 @@ body {
   }
 }
 
-//.main {
-//  background-color: $mainColor;
-//}
-
-//.main__intro {
-//    text-align: center;
-//    padding: 1rem 0;
-//    .main__intro-text {
-//      font-family: $fontFamily;
-//      font-size: 2rem;
-//      margin: 0;
-//      @media screen and ($tablet){
-//        font-size: 3rem;
-//      }
-//    }
-//  }
-
 .main__features {
   @include outer-container;
 }
@@ -154,7 +137,7 @@ body {
     }
   }
   .main__features-info--text {
-    font-size: 1rem;
+    font-size: 0.9rem;
     font-family: $fontFamily;
     @media screen and ($tablet){
       font-size: 1.5rem;
