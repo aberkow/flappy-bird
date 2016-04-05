@@ -29,6 +29,10 @@ $linkColor: #d96732;
   box-sizing: border-box;
 }
 
+body {
+  background-color: $mainColor;
+}
+
 .header {
   background-color: $secondaryColor;
   position: relative;
@@ -36,6 +40,9 @@ $linkColor: #d96732;
 
 .header__nav {
   display: inline-block;
+  @media screen and ($desktop){
+    margin-left: 2rem;
+  }
 }
 
 .header__nav-list {
@@ -61,57 +68,21 @@ $linkColor: #d96732;
   @include centerer;
   .header__title-text {
     font-family: $fontFamily;
+    font-size: 2.5rem;
     margin: 0;
-  }
-}
-
-.main {
-  background-color: $mainColor;
-}
-
-.main__intro {
-    text-align: center;
-    .main__intro-text {
-      font-family: $fontFamily;
-      font-size: 2rem;
-      margin: 0;
+    @media screen and ($tablet){
+      font-size: 4rem;
     }
-  }
-
-.main__features {
-  background-color: $mainColor;
-  @include outer-container;
-}
-
-.main__features-img {
-  @include span-columns(6);
-  overflow: hidden;
-  .main__features-img--screenshot {
-    max-height: 300px;
-    width: auto;
-  }
-}
-
-.main__features-info {
-  @include span-columns(6);
-  text-align: center;
-  width: auto;
-  .main__features-info--title {
-    font-size: 1.5rem;
-    font-family: $fontFamily;
-  }
-  .main__features-info--text {
-    font-size: 1rem;
-    font-family: $fontFamily;
   }
 }
 
 .ctoa {
-  background-color: $mainColor;
   text-align: center;
   height: 5rem;
   position: relative;
-  
+  @media screen and ($tablet){
+    margin: 1rem auto;
+  }
   .ctoa__link {
     color: $textColor;
     text-decoration: none;
@@ -120,8 +91,94 @@ $linkColor: #d96732;
     background-color: $linkColor;
     padding: 1rem 1rem;
     @include centerer;
+    @media screen and ($tablet){
+      font-size: 2rem;
+    }
+    @media screen and ($desktop){
+      font-size: 2.5rem;
+    }
   }
 }
+
+//.main {
+//  background-color: $mainColor;
+//}
+
+//.main__intro {
+//    text-align: center;
+//    padding: 1rem 0;
+//    .main__intro-text {
+//      font-family: $fontFamily;
+//      font-size: 2rem;
+//      margin: 0;
+//      @media screen and ($tablet){
+//        font-size: 3rem;
+//      }
+//    }
+//  }
+
+.main__features {
+  @include outer-container;
+}
+
+.main__features-img {
+  @include span-columns(6);
+  .main__features-img--screenshot {
+    max-width: 150px;
+    height: auto;
+    @include shift(1);
+    @media screen and ($tablet){
+      @include shift(3);
+      max-width: 175px;
+    }
+    @media screen and ($desktop){
+      @include shift(5);
+      max-width: 225px;
+    }
+  }
+}
+
+.main__features-info {
+  @include span-columns(6);
+  text-align: center;
+  width: auto;
+  .main__features-info--title {
+    margin: 0;
+    font-size: 1.5rem;
+    font-family: $fontFamily;
+    @media screen and ($tablet){
+      font-size: 2rem;
+    }
+    @media screen and ($desktop){
+      font-size: 2.5rem;
+    }
+  }
+  .main__features-info--text {
+    font-size: 1rem;
+    font-family: $fontFamily;
+    @media screen and ($tablet){
+      font-size: 1.5rem;
+    }
+    @media screen and ($desktop){
+      font-size: 1.75rem;
+    }
+  }
+}
+
+.main__outro {
+  text-align: center;
+  color: $textColor;
+  .main__outro-text {
+    font-family: $fontFamily;
+    @media screen and ($tablet){
+      font-size: 1.5rem;
+    }
+    @media screen and ($desktop){
+      font-size: 1.75rem;
+    }
+  }
+}
+
 
 .footer {
   background-color: $secondaryColor;
@@ -131,6 +188,10 @@ $linkColor: #d96732;
   padding-top: 0.5rem;
   text-align: center;
   margin: 0 auto;
+  .footer__social-text {
+    font-family: $fontFamily;
+    font-size: 0.75rem;
+  }
   .footer__social-list {
     list-style-type: none;
     display: inline-block;
