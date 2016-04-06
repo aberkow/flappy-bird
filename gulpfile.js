@@ -62,7 +62,7 @@ gulp.task('scripts', function(){
     .pipe(gulp.dest('build/js'));
 });
 
-//concat compiled css files
+//concat and minify compiled css files
 gulp.task('styles', function(){
   return gulp.src('css/*.css')
     .pipe(concat('styles.css'))
