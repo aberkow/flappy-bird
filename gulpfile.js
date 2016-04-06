@@ -6,6 +6,7 @@ var imagemin = require('gulp-imagemin');
 var browserify = require('browserify');
 var uglify = require('gulp-uglify');
 var minifyHTML = require('gulp-minify-html');
+var cleanCSS = require('gulp-clean-css');
 var concat = require('gulp-concat');
 var rename = require('gulp-rename');
 var source = require('vinyl-source-stream');
@@ -65,6 +66,7 @@ gulp.task('scripts', function(){
 gulp.task('styles', function(){
   return gulp.src('css/*.css')
     .pipe(concat('styles.css'))
+    .pipe(cleanCSS())
     .pipe(gulp.dest('build/css'));
 });
 
