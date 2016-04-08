@@ -54,12 +54,13 @@ gulp.task('html', function(){
 
 //concat and minify js files
 gulp.task('scripts', function(){
-  return browserify('js/app.js')
+  return browserify('js/main.js')
+    //.add('./js/main.js')
     .bundle()
     .pipe(source('app.js'))
     .pipe(buffer())
-    .pipe(uglify())
-    .pipe(gulp.dest('build/js'));
+    //.pipe(uglify())
+    .pipe(gulp.dest('./build/js'));
 });
 
 //concat and minify compiled css files
